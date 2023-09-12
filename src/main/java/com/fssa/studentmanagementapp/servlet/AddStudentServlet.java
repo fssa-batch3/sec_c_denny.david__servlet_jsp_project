@@ -22,58 +22,60 @@ import com.fssa.studentmanagementapp.model.Student;
 @WebServlet("/AddStudent")
 public class AddStudentServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AddStudentServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public AddStudentServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		PrintWriter out = response.getWriter();
-		String strId = request.getParameter("id");
 		String name = request.getParameter("name");
-		Gender gender = Gender.valueOf(request.getParameter("gender"));
-		String createdDate = request.getParameter("createdDate");
+		Gender gender = Gender.valueToEnumMapping(request.getParameter("gender"));
+		System.out.println(gender);
 		String mobileNo = request.getParameter("mobileNo");
 		String dateOfBirth = request.getParameter("dob");
 		String emailId = request.getParameter("email");
 		String password = request.getParameter("password");
-		int id = Integer.parseInt(strId);
+		
 		LocalDate dob = LocalDate.parse(dateOfBirth);
-		LocalDate createDate = LocalDate.parse(createdDate);
+
 		try {
 			Student student = new Student();
-			student.setCreatedDate(createDate);
+		
 			student.setDob(dob);
 			student.setEmailId(emailId);
 			student.setGender(gender);
-			student.setId(id);
+		
 			student.setMobileNo(password);
 			student.setName(name);
 			student.setPassword(password);
-			
-			
+
 			boolean isAdded = StudentService.addStudent(student);
-			if(isAdded) {
-				out.println("<h1>Successfully added the student</h1>");
+			if (isAdded) {
+				out.println("Successfully added the student");
 			}
-			
-		}catch (SQLException e) {
+
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
