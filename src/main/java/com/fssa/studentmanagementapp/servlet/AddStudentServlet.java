@@ -66,7 +66,7 @@ public class AddStudentServlet extends HttpServlet {
 			student.setEmailId(emailId);
 			student.setGender(gender);
 		
-			student.setMobileNo(password);
+			student.setMobileNo(mobileNo);
 			student.setName(name);
 			student.setPassword(password);
 

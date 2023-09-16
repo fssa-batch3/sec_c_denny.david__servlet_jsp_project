@@ -22,7 +22,7 @@
 	<div id="addstupopup">
 		<div id="userModal" class="modal">
 
-
+                        
 
 
 			<div class="modal-content">

@@ -16,6 +16,18 @@
   	<description></description>
   	<servlet-class>com.fssa.studentmanagementapp.servlet.AddStudentServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ListingStudents</servlet-name>
+  	<display-name>ListingStudents</display-name>
+  	<description></description>
+  	<servlet-class>com.fssa.studentmanagementapp.servlet.ListingStudents</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>StudentList</servlet-name>
+  	<display-name>StudentList</display-name>
+  	<description></description>
+  	<servlet-class>com.fssa.studentmanagementapp.servlet.StudentList</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>DeleteServlet</servlet-name>
   	<url-pattern>/DeleteServlet</url-pattern>
@@ -23,5 +35,13 @@
   <servlet-mapping>
   	<servlet-name>AddStudentServlet</servlet-name>
   	<url-pattern>/AddStudentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ListingStudents</servlet-name>
+  	<url-pattern>/ListingStudents</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>StudentList</servlet-name>
+  	<url-pattern>/StudentList</url-pattern>
   </servlet-mapping>
 </web-app>
