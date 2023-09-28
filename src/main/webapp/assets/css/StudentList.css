@@ -65,11 +65,11 @@ img#add_student {
     height:45px;
     border-radius: 50%;
 }
-form {
+main form {
     margin-left: 550px;
     margin-top: 25px;
 }
-form input {
+main form input {
     width:500px;
     height:40px;
     border: 3px solid rgba(200, 198, 198, 0.24);
@@ -77,15 +77,17 @@ form input {
     border-radius: 10px;
 
 }
-form button {
-    width:100px;
+main form button,main form p {
+	display: inline;
     height:40px;
     font-size: 20px;
     color: rgb(220, 219, 219);
-    background-color:#007bff ;
+    padding: 8px;
+    background-color:rgb(48, 48, 50);
     border: 3px solid rgba(200, 198, 198, 0.24);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 7px;
+    cursor: pointer;
 }
 input[type=text]{
     font-size: 15px;
@@ -96,21 +98,28 @@ input[type=text]{
     margin-top:10px;
 }
 table {
-    width: 100%;
+    width:94%;
     border-collapse: collapse;
-    margin: 20px auto;
+    margin: 40px ;
 
 }
 
 th, td {
-    padding: 12px 15px;
+    padding:  15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+table td button{
+	padding: 10px;
+	border-width: 0px;
+	background-color: lightgrey;
+	border-radius: 2px;
+	cursor: pointer;
 }
 
 th {
-    background-color: #f2f2f2;
-    font-weight: bold;
+background-color: rgb(48, 48, 50); color: white;
 }
 
 tr:nth-child(even) {
@@ -120,4 +129,37 @@ tr:nth-child(even) {
 /* CSS for hover effect */
 tr:hover {
     background-color: #ddd;
+}
+
+.assignStudentDiv{
+	width: 500px;
+	height: 250px;
+	margin-top: 30px;
+	margin-left: 600px;
+	padding: 20px;
+	box-sizing: border-box;
+	text-align: center;
+	background-color: white;
+	border-radius: 10px;
+}
+.assignDetails{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin:10px 0px;
+}
+.assignDetails input{
+	border-width: 0px;
+	height: 30px;
+	padding: 5px;
+
+	background-color: rgb(227, 227, 227);
+}
+.assignStudentDiv button{
+	border-width: 0px;
+	padding: 10px 25px;
+	background-color: rgb(77, 77, 77);
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
 }

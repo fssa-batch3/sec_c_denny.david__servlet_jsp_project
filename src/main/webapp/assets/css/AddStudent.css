@@ -42,12 +42,12 @@ body {
     display: flex;
     width: 100%;
     background-color: #f5f5f5;
-   
     justify-content: center; /* Center content horizontally */
     padding: 20px;
 }
 
 .modal-content {
+	margin:50px 0px 0px 100px;
     width: 400px;
     background-color: #ffffff;
     padding: 20px;
@@ -60,15 +60,16 @@ body {
 /* Style the close button */
 .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
+    top: 160px;
+    right: 450px;
+    font-size: 30px;
+    font-weight: 1000;
     cursor: pointer;
     color: #777;
 }
 
 /* Style form elements */
-form {
+.form {
     margin-top: 10px;
     width: 100%;
     display: flex;
@@ -76,16 +77,16 @@ form {
     align-items: center; /* Center form horizontally */
 }
 
-label {
+.form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-select {
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"],
+.form select {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -94,16 +95,16 @@ select {
     font-size: 16px;
 }
 
-select {
+.form select {
     height: 40px;
 }
 
 /* Style the button container */
-.button-container {
+.form .button-container {
     text-align: center;
 }
 
-input[type="submit"] {
+.form input[type="submit"] {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -113,7 +114,7 @@ input[type="submit"] {
     font-size: 16px;
 }
 
-input[type="submit"]:hover {
+.form input[type="submit"]:hover {
     background-color: rgb(0, 0, 0);
 }
 
@@ -124,20 +125,3 @@ h1#add_student {
     
 }
 
-#openModalButton {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    margin: 20px;
-    width: 140px;
-    margin-left: 500px;
-    height: 50px;
-}
-
-#openModalButton:hover {
-    background-color: #0056b3;
-}

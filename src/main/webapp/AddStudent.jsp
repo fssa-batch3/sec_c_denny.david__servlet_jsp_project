@@ -10,19 +10,19 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-  <nav class="sidebar">
-        <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="AddStudent.html">Student</a></li>
-            <li><a href="#">Student List</a></li>
-            <li><a href="#">Class</a></li>
-        </ul>
-    </nav>
+	<nav class="sidebar">
+		<ul>
+			<li><a href="#" class="active">Home</a></li>
+			<li><a href="AddStudent.html">Student</a></li>
+			<li><a href="#">Student List</a></li>
+			<li><a href="#">Class</a></li>
+		</ul>
+	</nav>
 	<button id="openModalButton">Add Student</button>
 	<div id="addstupopup">
 		<div id="userModal" class="modal">
 
-                        
+
 
 
 			<div class="modal-content">
@@ -31,13 +31,12 @@
 				<span class="close">&times;</span>
 				<form action="./AddStudentServlet" method="post">
 					<h1 id="add_student">Add Student</h1>
-					<label for="name">Enter your name:</label> <input
-						type="text" id="name" name="name">
-						 <label for="dob">Date
-						of Birth (dd/mm/yyyy):</label> <input type="date" id="dob" name="dob">
+					<label for="name">Enter your name:</label> <input type="text"
+						id="name" name="name"> <label for="dob">Date of
+						Birth (dd/mm/yyyy):</label> <input type="date" id="dob" name="dob">
 
-					<label
-						for="gender">Gender:</label> <select id="gender" name="gender">
+					<label for="gender">Gender:</label> <select id="gender"
+						name="gender">
 						<option value="M">MALE</option>
 						<option value="F">FEMALE</option>
 					</select> <label for="email">Email Id:</label> <input type="email"
