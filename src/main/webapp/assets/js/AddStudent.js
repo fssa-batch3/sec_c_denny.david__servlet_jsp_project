@@ -57,3 +57,5 @@ var tr= document.querySelectorAll("tr");
 		window.location.href="#assignStudent";
 		})
 	})
+	
+	

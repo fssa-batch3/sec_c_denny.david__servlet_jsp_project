@@ -108,6 +108,7 @@
 					if (isClass) {
 					%>
 					<th>Update class</th>
+					<th>Edit</th>
 					<%
 					}
 					%>
@@ -144,6 +145,7 @@
 					if (isClass) {
 					%>
 					<td><button class="updateButton">Update</button></td>
+					<td><button class="editButton">Edit</button></td>
 					<%
 					}
 					%>
@@ -189,13 +191,38 @@
 					</div>
 				</form>
 			</div>
+      </div>
+     </div>
+     
+     <div id="editstupopup">
+		<div id="userModal" class="modal">
+			<div class="edit-content">
+				<span class="close">&times;</span>
+				<form class="form" action="./AddStudentServlet" method="post">
+					<h1 id="add_student">Add Student</h1>
+					<label for="name">Enter your name:</label> <input type="text"
+						id="name" name="name"> <label for="dob">Date of
+						Birth (dd/mm/yyyy):</label> <input type="date" id="dob" name="dob">
 
+					<label for="gender">Gender:</label> <select id="gender"
+						name="gender">
+						<option value="MALE">MALE</option>
+						<option value="FEMALE">FEMALE</option>
+					</select> <label for="email">Email Id:</label> <input type="email"
+						id="email" name="email"> <label for="password">Password:</label>
+					<input type="password" id="password" name="password"> <label
+						for="mobileNo">Mobile No:</label> <input type="text" id="mobileNo"
+						name="mobileNo">
 
-		</div>
-
-	</div>
-
+					<div class="button-container">
+						<input type="submit" value="Submit">
+					</div>
+				</form>
+			</div>
+      </div>
+     </div>
 
 </body>
 <script src="./assets/js/AddStudent.js"></script>
+<script src="./assets/js/StudentList.js"></script>
 </html>
